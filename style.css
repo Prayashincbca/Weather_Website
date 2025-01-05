@@ -1,0 +1,126 @@
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #3a3a3a, #1c1c1c);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('images/weather.png');
+  background-attachment: fixed;
+  color: #eaeaea;
+}
+
+/* Card Styling */
+.card {
+  background: rgba(15, 14, 14, 0.85);
+  color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Search Section */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  border-radius: 25px;
+  background: rgba(124, 124, 124, 0.2);
+  color: #e6e6e6;
+  font-size: 1rem;
+  flex: 1;
+  margin-right: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+input.search-bar::placeholder {
+  color: #b0b0b0;
+}
+
+button {
+  border: none;
+  outline: none;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: rgba(124, 124, 124, 0.2);
+  color: #eaeaea;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(124, 124, 124, 0.4);
+  transform: scale(1.1);
+}
+
+/* Weather Details */
+h1.temp {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+h2.city {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+img.icon {
+  width: 60px;
+  height: 60px;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+.humidity,
+.wind {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+/* Loading State */
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: #d1cccc;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
